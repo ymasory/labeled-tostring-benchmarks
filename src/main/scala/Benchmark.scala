@@ -6,19 +6,19 @@ class Benchmark extends SimpleScalaBenchmark {
   val age = 30
  
   def timeCreateCaseClassPerson(reps: Int) = repeat(reps) {
-    new CasePerson(name, age) toString
+    CasePerson(name, age)
   }
   
   def timeCreateLabeledToStringValPerson(reps: Int) = repeat(reps) {
-    new ValPerson(name, age) toString
+    ValPerson(name, age)
   }
  
   def timeCreateLabeledToStringLazyValPerson(reps: Int) = repeat(reps) {
-    new LazyValPerson(name, age) toString
+    LazyValPerson(name, age)
   }
  
   def timeCreateLabeledToStringDefPerson(reps: Int) = repeat(reps) {
-    new DefPerson(name, age) toString
+    DefPerson(name, age)
   }  
   
 }
