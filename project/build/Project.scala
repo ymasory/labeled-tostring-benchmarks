@@ -16,6 +16,8 @@ class Project(info: ProjectInfo) extends DefaultProject(info) {
                     "http://oss.sonatype.org/content/repositories/snapshots")
   val caliper = "com.google.code.caliper" % "caliper" % "1.0-SNAPSHOT"
 
+  log.setTrace(0)
+
   override def fork =
     forkRun("-cp" :: (runClasspath +++ buildLibraryJar).absString :: Nil)
 }
