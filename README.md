@@ -5,7 +5,6 @@ Some benchmarks for the [labeled-tostring project](https://github.com/ymasory/la
 ## Run ##
 
     cd labeled-tostring-benchmarks
-    sbt update
-    sbt run
+    ./sbt run
 
 Don't worry about the `SecurityExceptions`, they're normal. We use the `SecurityManager` to prevent caliper from succeeding in its `System.exit` calls. If you get a different error just run `sbt update` and `sbt run` again.
